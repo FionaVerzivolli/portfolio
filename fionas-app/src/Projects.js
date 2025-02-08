@@ -57,7 +57,7 @@ const projects = [
     {
         title: "Portfolio Site",
         description: "What you are using right now! Pretty cool huh?",
-        technologies:["React", "Material UI", "AWS"],
+        technologies:["React", "Material UI"],
         link: "https://github.com/FionaVerzivolli"
     }
   ];
