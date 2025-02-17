@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.ac040dab.css",
-    "main.js": "/portfolio/static/js/main.03eef44a.js",
+    "main.js": "/portfolio/static/js/main.015080f9.js",
     "static/js/453.44c077fc.chunk.js": "/portfolio/static/js/453.44c077fc.chunk.js",
     "static/media/crab.jpg": "/portfolio/static/media/crab.4a8cda4a7053eb1467c5.jpg",
     "static/media/fruits.jpg": "/portfolio/static/media/fruits.70d48a50c428fa54a1b2.jpg",
+    "static/media/g23.jpg": "/portfolio/static/media/g23.2255cee17afb7bea434b.jpg",
     "static/media/out.jpg": "/portfolio/static/media/out.755504d4a179da5bbc0e.jpg",
     "static/media/p3.jpg": "/portfolio/static/media/p3.3dce67b5b41b7653108b.jpg",
     "static/media/shop.jpg": "/portfolio/static/media/shop.cea2634b94befe7ac589.jpg",
+    "static/media/g20.jpg": "/portfolio/static/media/g20.1e1c44775b4599aceb11.jpg",
     "static/media/pufferfish.jpg": "/portfolio/static/media/pufferfish.595b5557d3f5c435af11.jpg",
     "static/media/g2.jpg": "/portfolio/static/media/g2.43cb5466dfeb663c41cc.jpg",
     "static/media/p2.jpg": "/portfolio/static/media/p2.d63c47f4a473869e0a6e.jpg",
@@ -18,9 +20,10 @@
     "static/media/building.jpg": "/portfolio/static/media/building.7473edd7e11804af26d1.jpg",
     "static/media/g1.jpg": "/portfolio/static/media/g1.35dc1d05c6d6d36d6970.jpg",
     "static/media/fish.jpg": "/portfolio/static/media/fish.a710e37fd3b33e93925b.jpg",
-    "static/media/shark.jpg": "/portfolio/static/media/shark.7d3e179aece4ca947d14.jpg",
+    "static/media/g24.jpg": "/portfolio/static/media/g24.bbb2012e97b62438e50f.jpg",
     "static/media/g5.jpg": "/portfolio/static/media/g5.3b16c2dfabe98173a7f6.jpg",
-    "static/media/cool.jpg": "/portfolio/static/media/cool.2905582eae305157b42d.jpg",
+    "static/media/g21.jpg": "/portfolio/static/media/g21.eefa9da2106e93c906eb.jpg",
+    "static/media/g22.jpg": "/portfolio/static/media/g22.54b074feaa332410ff76.jpg",
     "static/media/flowers.jpg": "/portfolio/static/media/flowers.0f63ef210c3dc2a51a63.jpg",
     "static/media/g6.jpg": "/portfolio/static/media/g6.0f01f4f8306fc3a0b833.jpg",
     "static/media/profile.jpg": "/portfolio/static/media/profile.a8c32ca03a806513e9f0.jpg",
@@ -30,11 +33,11 @@
     "static/media/poppins-latin-ext-400-normal.woff2": "/portfolio/static/media/poppins-latin-ext-400-normal.d7c074a9c34fe9785f69.woff2",
     "index.html": "/portfolio/index.html",
     "main.ac040dab.css.map": "/portfolio/static/css/main.ac040dab.css.map",
-    "main.03eef44a.js.map": "/portfolio/static/js/main.03eef44a.js.map",
+    "main.015080f9.js.map": "/portfolio/static/js/main.015080f9.js.map",
     "453.44c077fc.chunk.js.map": "/portfolio/static/js/453.44c077fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ac040dab.css",
-    "static/js/main.03eef44a.js"
+    "static/js/main.015080f9.js"
   ]
 }
