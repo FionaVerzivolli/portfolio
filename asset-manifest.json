@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.68fe022c.css",
-    "main.js": "/static/js/main.4e4e2351.js",
+    "main.js": "/static/js/main.79d6f1e1.js",
     "static/js/453.44c077fc.chunk.js": "/static/js/453.44c077fc.chunk.js",
     "static/media/crab.jpg": "/static/media/crab.4a8cda4a7053eb1467c5.jpg",
     "static/media/fruits.jpg": "/static/media/fruits.70d48a50c428fa54a1b2.jpg",
@@ -26,18 +26,18 @@
     "static/media/g22.jpg": "/static/media/g22.54b074feaa332410ff76.jpg",
     "static/media/flowers.jpg": "/static/media/flowers.0f63ef210c3dc2a51a63.jpg",
     "static/media/g6.jpg": "/static/media/g6.0f01f4f8306fc3a0b833.jpg",
-    "static/media/profile.jpg": "/static/media/profile.a8c32ca03a806513e9f0.jpg",
+    "static/media/profile.jpg": "/static/media/profile.068c5d6d8106aecb315d.jpg",
     "static/media/poppins-latin-400-normal.woff": "/static/media/poppins-latin-400-normal.1458587c0aa7cd06b82b.woff",
     "static/media/poppins-latin-400-normal.woff2": "/static/media/poppins-latin-400-normal.405055dd680fa1dcdfa2.woff2",
     "static/media/poppins-latin-ext-400-normal.woff": "/static/media/poppins-latin-ext-400-normal.7e12786771ac4a8e6a5c.woff",
     "static/media/poppins-latin-ext-400-normal.woff2": "/static/media/poppins-latin-ext-400-normal.d7c074a9c34fe9785f69.woff2",
     "index.html": "/index.html",
     "main.68fe022c.css.map": "/static/css/main.68fe022c.css.map",
-    "main.4e4e2351.js.map": "/static/js/main.4e4e2351.js.map",
+    "main.79d6f1e1.js.map": "/static/js/main.79d6f1e1.js.map",
     "453.44c077fc.chunk.js.map": "/static/js/453.44c077fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.68fe022c.css",
-    "static/js/main.4e4e2351.js"
+    "static/js/main.79d6f1e1.js"
   ]
 }
