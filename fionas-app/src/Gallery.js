@@ -16,7 +16,11 @@ import fish from "./images/gallery/fish.jpg";
 import flowers from "./images/gallery/flowers.jpg";
 import fruits from "./images/gallery/fruits.jpg";
 import pufferfish from "./images/gallery/pufferfish.jpg";
-import shark from "./images/gallery/shark.jpg";
+import stadium from "./images/gallery/g20.jpg";
+import baham from "./images/gallery/g21.jpg";
+import baham2 from "./images/gallery/g22.jpg";
+import bench from "./images/gallery/g23.jpg";
+import bing from "./images/gallery/g24.jpg";
 import shop from "./images/gallery/shop.jpg";
 import building from "./images/gallery/building.jpg";
 import out from "./images/gallery/out.jpg";
@@ -37,7 +41,7 @@ const theme = createTheme({
 });
 
 // **Predefined Order of Images**
-const images = [g4, crab, p1, boat, shop, pufferfish, g1, out, g3, flowers, street, p2, g6, fish, g2, fruits, building, g5];
+const images = [g4, crab, p1, boat, shop, pufferfish, stadium, g1, out, g3, baham, bing, bench, flowers, street, p2, g6, fish, g2, fruits, building, baham2, g5];
 
 function Gallery() {
   const [open, setOpen] = useState(false);

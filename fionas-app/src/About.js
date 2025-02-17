@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "@fontsource/poppins";
 
 // Import profile image
-import cool from "./images/cool.jpg";
+import cool from "./images/gallery/flowers.jpg";
 
 const theme = createTheme({
   typography: {
@@ -49,7 +49,7 @@ function About() {
                 src={cool}
                 alt="Fiona Verzivolli"
                 sx={{
-                  width: 250,
+                  width: 300,
                   height: "auto",
                   borderRadius: "8px",
                   border: "5px solid rgba(33, 150, 243, 0.7)",
@@ -57,23 +57,29 @@ function About() {
                 }}
               />
               <Typography variant="body2" color="text.secondary" sx={{ mt: 1, fontStyle: "italic" }}>
-                Me and my new sea turtle friend!
+                A painting of flowers I made.
               </Typography>
             </Box>
 
             {/* About Me Text */}
             <Box sx={{ textAlign: "left", flex: "2 1 500px", ml: 3 }}>
               <Typography variant="body1" color="text.secondary">
-                Hi! I'm Fiona, a second-year Computer Science student at the University of Toronto, specializing in Computer Science with a minor in Statistics and Math. I have a passion for systems programming, AI/ML, and making an impact.
+                Hi! I'm Fiona, a second-year Computer Science student at the University of Toronto, specializing in Computer Science with a minor in Statistics and Math. I have a passion for building things and making an impact.
                 <br /><br />
-                I believe in using <strong>technology to help others</strong> and create real-world solutions. Whether it's through <strong>software development, research, or collaboration</strong>, I strive to make a meaningful impact.  
+                I believe in using <strong>technology to help others</strong> and create real-world solutions. Whether it's through <strong>software development, research, or collaboration</strong>, I strive to make a meaningful change.  
                 <br /><br />
                 This summer, I will be interning at <strong>Shopify as a Software Engineer</strong>, where I will help <strong>merchants turn their dreams into reality</strong> by building innovative e-commerce solutions.  
                 <br /><br />
-                I'm currently working as a Software Developer at Dr. Jang's Lab, developing <strong>BalanceAI</strong>, a literacy and language assessment tool for elementary and middle school students. I'm also learning <strong>CUDA and MongoDB</strong> while diving deeper into <strong>scientific computing</strong>.  
+                I'm currently working as a Software Developer at Dr. Jang's Lab, developing <strong>BalanceAI</strong>, a literacy and language assessment tool for elementary and middle school students. I'm also learning <strong>CUDA and MongoDB</strong> while diving deeper into
+                <strong> numerical methods, databases,</strong> and <strong>systems programming</strong> through my coursework at the University of Toronto.  
                 <br /><br />
-                I love collaborating on projects related to <strong>systems programming, scientific computing, open-source tools, and educational technology</strong>. In my free time, I enjoy <strong>taking walks, painting, playing video games, and admiring architecture</strong>.  
+                I love collaborating on projects related to <strong>systems programming, scientific computing, open-source tools, and educational technology</strong>. In my free time, I enjoy <strong>taking walks</strong> in nature, <strong>painting</strong> with different mediums such as watercolours, acrylics and oils, 
+                <strong> playing video games</strong> such as League of Legends, Binding of Isaac, Balatro, Minecraft, and <strong>admiring architecture</strong>.
+                 I always take a moment to look at the buildings around me whenever I'm walking near downtown Toronto's St. Andrew station!
+                <br /><br />
               </Typography>
+
+              <Typography variant="body1" color="text.secondary"> I love making new friends! If you want to connect with me, feel free to do so! You can find my information in the <strong>contact</strong> section.</Typography>
             </Box>
           </Paper>
         </Container>

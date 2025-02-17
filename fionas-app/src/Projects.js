@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Box, Button, Grid, Container } from "@mui/
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Link } from "react-router-dom";
 import "@fontsource/poppins";
-import ProjectCard from "./ProjectCard"; // Import reusable component
+import ProjectCard from "./ProjectCard";
 
 const theme = createTheme({
   typography: {
@@ -16,7 +16,6 @@ const theme = createTheme({
   },
 });
 
-// Sample project data (each project now has an image)
 const projects = [
     { 
       title: "EventHive UofT",
@@ -69,7 +68,7 @@ const projects = [
         title={project.title}
         description={project.description}
         technologies={project.technologies}
-        link={project.link} // Pass GitHub link
+        link={project.link}
       />
     ))}
   </Grid>;
