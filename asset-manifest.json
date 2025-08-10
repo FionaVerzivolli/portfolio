@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5cd45644.css",
+    "main.js": "/static/js/main.08b3eb8f.js",
+    "static/js/453.44c077fc.chunk.js": "/static/js/453.44c077fc.chunk.js",
+    "static/media/crab.jpg": "/static/media/crab.4a8cda4a7053eb1467c5.jpg",
+    "static/media/fruits.jpg": "/static/media/fruits.70d48a50c428fa54a1b2.jpg",
+    "static/media/g23.jpg": "/static/media/g23.2255cee17afb7bea434b.jpg",
+    "static/media/out.jpg": "/static/media/out.755504d4a179da5bbc0e.jpg",
+    "static/media/p3.jpg": "/static/media/p3.3dce67b5b41b7653108b.jpg",
+    "static/media/shop.jpg": "/static/media/shop.cea2634b94befe7ac589.jpg",
+    "static/media/g20.jpg": "/static/media/g20.1e1c44775b4599aceb11.jpg",
+    "static/media/pufferfish.jpg": "/static/media/pufferfish.595b5557d3f5c435af11.jpg",
+    "static/media/g2.jpg": "/static/media/g2.43cb5466dfeb663c41cc.jpg",
+    "static/media/p2.jpg": "/static/media/p2.d63c47f4a473869e0a6e.jpg",
+    "static/media/street.jpg": "/static/media/street.a87184fd944c15985c89.jpg",
+    "static/media/g4.jpg": "/static/media/g4.afb6ab47c684b734c350.jpg",
+    "static/media/g3.jpg": "/static/media/g3.0975c458aefb76b80f89.jpg",
+    "static/media/p1.jpg": "/static/media/p1.505c2dffdd68899f348e.jpg",
+    "static/media/friends.jpg": "/static/media/friends.edc0794b2675721b4f0a.jpg",
+    "static/media/building.jpg": "/static/media/building.7473edd7e11804af26d1.jpg",
+    "static/media/g1.jpg": "/static/media/g1.35dc1d05c6d6d36d6970.jpg",
+    "static/media/fish.jpg": "/static/media/fish.a710e37fd3b33e93925b.jpg",
+    "static/media/g24.jpg": "/static/media/g24.bbb2012e97b62438e50f.jpg",
+    "static/media/g5.jpg": "/static/media/g5.3b16c2dfabe98173a7f6.jpg",
+    "static/media/g21.jpg": "/static/media/g21.eefa9da2106e93c906eb.jpg",
+    "static/media/g22.jpg": "/static/media/g22.54b074feaa332410ff76.jpg",
+    "static/media/flowers.jpg": "/static/media/flowers.0f63ef210c3dc2a51a63.jpg",
+    "static/media/g6.jpg": "/static/media/g6.0f01f4f8306fc3a0b833.jpg",
+    "static/media/poppins-latin-400-normal.woff": "/static/media/poppins-latin-400-normal.1458587c0aa7cd06b82b.woff",
+    "static/media/poppins-latin-400-normal.woff2": "/static/media/poppins-latin-400-normal.405055dd680fa1dcdfa2.woff2",
+    "static/media/poppins-latin-ext-400-normal.woff": "/static/media/poppins-latin-ext-400-normal.7e12786771ac4a8e6a5c.woff",
+    "static/media/poppins-latin-ext-400-normal.woff2": "/static/media/poppins-latin-ext-400-normal.d7c074a9c34fe9785f69.woff2",
+    "index.html": "/index.html",
+    "main.5cd45644.css.map": "/static/css/main.5cd45644.css.map",
+    "main.08b3eb8f.js.map": "/static/js/main.08b3eb8f.js.map",
+    "453.44c077fc.chunk.js.map": "/static/js/453.44c077fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5cd45644.css",
+    "static/js/main.08b3eb8f.js"
+  ]
+}
