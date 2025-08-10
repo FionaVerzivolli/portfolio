@@ -4,7 +4,7 @@ import { commonStyles } from "./theme";
 import cool from "./images/gallery/g23.jpg";
 
 function About() {
-  const awards = ["Dean's List Scholar", "University of Toronto Scholar", "Helga and Frank Peroutka Award", "Dean's Merit Award", "~$30k in total scholarship value"];
+  const awards = ["Dean's List Scholar (2024 - present)", "University of Toronto Scholar", "Helga and Frank Peroutka Award", "Dean's Merit Award", "~$30k in total scholarship value"];
   
   const skills = [
     "Java", "Python", "C/C++", "SQL", "JavaScript", "HTML/CSS", "R", "MATLAB",
@@ -116,18 +116,16 @@ function About() {
               }
             }}
           >
-            Hi! I'm Fiona, a second-year Computer Science student at the University of Toronto, specializing in Computer Science with a minor in Statistics and Math. I have a passion for building things and making an impact.
+            Hi! I'm Fiona, a third-year Computer Science student at the University of Toronto, specializing in Computer Science with a minor in Statistics and Math. I have a passion for building things and making an impact.
             <br /><br />
             I believe in using <strong>technology to help others</strong> and create real-world solutions. Whether it's through <strong>software development, research, or collaboration</strong>, I strive to make a meaningful change.  
             <br /><br />
-            This summer, I'm interning at <strong>Shopify as a Software Engineer</strong>, where I will help <strong>merchants turn their dreams into reality</strong> by building innovative e-commerce solutions.  
+            This summer, I interned at <strong>Shopify as a Software Engineer</strong>, where I helped <strong>merchants turn their dreams into reality</strong> by building innovative e-commerce solutions.  
             <br /><br />
-            I'm currently working as a Software Developer at Dr. Jang's Lab, developing <strong>BalanceAI</strong>, a literacy and language assessment tool for elementary and middle school students. I'm also learning <strong>CUDA and MongoDB</strong> while diving deeper into
+            In the 2024-2025 academic year, I worked as a Software Developer at Dr. Jang's Lab, where I helped develop <strong>BalanceAI</strong> and <strong>APLUS</strong>, literacy and language assessment tools for students of all ages. I'm also learning <strong>CUDA and MongoDB</strong> while diving deeper into
             <strong> numerical methods, databases,</strong> and <strong>systems programming</strong> through my coursework at the University of Toronto.  
             <br /><br />
-            I love collaborating on projects related to <strong>systems programming, scientific computing, open-source tools, and educational technology</strong>. In my free time, I enjoy <strong>taking walks</strong> in nature, <strong>painting</strong> with different mediums such as watercolours, acrylics and oils, 
-            <strong> playing video games</strong> such as League of Legends, Binding of Isaac, Balatro, Minecraft, and <strong>admiring architecture</strong>.
-             I always take a moment to look at the buildings around me whenever I'm walking near downtown Toronto's St. Andrew station!
+            I love collaborating on projects related to <strong>systems programming, scientific computing, open-source tools, and educational technology</strong>. In my free time, I enjoy <strong>exploring new places</strong>, <strong>taking walks</strong> in nature, <strong>painting</strong> with different mediums, and <strong>playing video games</strong> such as League of Legends, Binding of Isaac, Balatro, Minecraft, and <strong>admiring the architecture</strong> of the buildings around me.
             <br /><br />
             I love making new friends! If you want to connect with me, feel free to do so! You can find my information in the <strong>contact</strong> section.
           </Typography>

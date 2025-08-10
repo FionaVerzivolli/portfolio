@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { Typography, Container, Box, Grid, Dialog, IconButton } from "@mui/material";
+import React from "react";
+import { Typography, Container, Box, Grid } from "@mui/material";
 import { commonStyles } from "./theme";
-import CloseIcon from '@mui/icons-material/Close';
 
 // Import images
 import g1 from "./images/gallery/g1.jpg";
@@ -32,19 +31,6 @@ import p1 from "./images/gallery/p1.jpg";
 const images = [g4, crab, p1, boat, shop, pufferfish, stadium, g1, out, g3, baham, bing, bench, flowers, street, p2, g6, fish, g2, fruits, building, baham2, g5];
 
 function Gallery() {
-  const [open, setOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  const handleOpen = (image) => {
-    setSelectedImage(image);
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-    setSelectedImage(null);
-  };
-
   return (
     <Container maxWidth="xl" sx={{ py: 4 }}>
       {/* Gallery Header */}
@@ -89,10 +75,8 @@ function Gallery() {
             key={index} 
             sx={{ 
               display: "flex", 
-              aspectRatio: "1 / 1", 
-              cursor: "pointer" 
-            }} 
-            onClick={() => handleOpen(src)}
+              aspectRatio: "1 / 1"
+            }}
           >
             <Box
               component="img"
@@ -107,9 +91,9 @@ function Gallery() {
                 transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                 position: 'relative',
                 '&:hover': { 
-                  transform: "scale(1.08) rotate(2deg)", 
-                  boxShadow: "0 20px 40px rgba(99, 102, 241, 0.4)",
-                  border: "2px solid rgba(99, 102, 241, 0.5)",
+                  transform: "scale(1.05)", 
+                  boxShadow: "0 15px 35px rgba(99, 102, 241, 0.3)",
+                  border: "2px solid rgba(99, 102, 241, 0.3)",
                   filter: 'brightness(1.1) contrast(1.1)',
                 },
                 ...commonStyles.fadeInUp,
@@ -120,61 +104,6 @@ function Gallery() {
           </Grid>
         ))}
       </Grid>
-
-      {/* Modal for Full Image */}
-      <Dialog 
-        open={open} 
-        onClose={handleClose} 
-        maxWidth="lg"
-        fullWidth
-        PaperProps={{
-          sx: {
-            background: 'rgba(0, 0, 0, 0.95)',
-            backdropFilter: 'blur(20px)',
-            borderRadius: '24px',
-            overflow: 'hidden',
-            boxShadow: '0 25px 50px rgba(0, 0, 0, 0.5)',
-            border: '1px solid rgba(99, 102, 241, 0.2)',
-          }
-        }}
-      >
-        <Box sx={{ position: 'relative' }}>
-          <IconButton
-            onClick={handleClose}
-            sx={{
-              position: 'absolute',
-              top: 16,
-              right: 16,
-              zIndex: 1,
-              background: 'rgba(0, 0, 0, 0.7)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.2)',
-              color: 'white',
-              transition: 'all 0.3s ease',
-              '&:hover': {
-                background: 'rgba(99, 102, 241, 0.3)',
-                border: '1px solid rgba(99, 102, 241, 0.5)',
-                transform: 'scale(1.1)',
-              }
-            }}
-          >
-            <CloseIcon />
-          </IconButton>
-          {selectedImage && (
-            <Box
-              component="img"
-              src={selectedImage}
-              alt="Full Size"
-              sx={{
-                width: "100%",
-                height: "auto",
-                display: "block",
-                transition: 'all 0.3s ease',
-              }}
-            />
-          )}
-        </Box>
-      </Dialog>
     </Container>
   );
 }
