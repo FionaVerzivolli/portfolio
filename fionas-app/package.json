@@ -1,12 +1,14 @@
 {
-  "homepage":"https://www.verzivolli.ca/portfolio",
+  "homepage": "https://www.verzivolli.ca",
   "name": "fionas-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@fontsource/inter": "^5.2.6",
     "@fontsource/poppins": "^5.1.1",
+    "@mui/icons-material": "^6.5.0",
     "@mui/material": "^6.4.3",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",

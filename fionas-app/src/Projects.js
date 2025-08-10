@@ -1,20 +1,7 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Box, Button, Grid, Container } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Link } from "react-router-dom";
-import "@fontsource/poppins";
+import { Typography, Box, Grid, Container } from "@mui/material";
+import { commonStyles } from "./theme";
 import ProjectCard from "./ProjectCard";
-
-const theme = createTheme({
-  typography: {
-    fontFamily: "Poppins, sans-serif",
-  },
-  palette: {
-    primary: { main: "#2196F3" },
-    background: { default: "#121212", paper: "#1A1A1A" },
-    text: { primary: "#ffffff", secondary: "#b0bec5" },
-  },
-});
 
 const projects = [
     { 
@@ -23,11 +10,11 @@ const projects = [
       technologies: ["Java", "JUnit", "OpenStreetMap API", "MailGun API", "Swing", "Spring Boot", "Firebase"],
       link: "https://github.com/FionaVerzivolli/EventHiveUofT"
     },
-    { 
-      title: "Credit Score Bias Visualizer", 
-      description: "A bias detection tool for credit scoring systems. Empowering organizations to analyze and mitigate disparities in credit scores using advanced analytics, interactive visualizations, and fairness tracking.",
-      technologies: ["Python", "Flask", "Chart.js", "React", "Firebase", "Auth0", "PythonAnywhere"],
-      link: "https://github.com/FionaVerzivolli/Credit-Score-Bias-Visualizer"
+    {
+      title: "Exploring GE, Pivoting, and LU Factorization",
+      description: " Implementations of Gaussian Elimination with various pivoting strategies, based on methods learned in CSC336 at the University of Toronto and Michael Heath's Scientific Computing textbook.",
+      technologies: ["Python", "NumPy", "Pandas"],
+      link: "https://github.com/FionaVerzivolli/Exploring-GE-Pivoting-and-LU-factorization"
     },
     { 
       title: "Sentisphere",
@@ -36,13 +23,19 @@ const projects = [
       link: "https://github.com/FionaVerzivolli/Sentisphere"
     },
     { 
+      title: "Credit Score Bias Visualizer", 
+      description: "A bias detection tool for credit scoring systems. Empowering organizations to analyze and mitigate disparities in credit scores using advanced analytics, interactive visualizations, and fairness tracking.",
+      technologies: ["Python", "Flask", "Chart.js", "React", "Firebase", "Auth0", "PythonAnywhere"],
+      link: "https://github.com/FionaVerzivolli/Credit-Score-Bias-Visualizer"
+    },
+    { 
       title: "Netflix Movie Recommender",
       description: "Movie recommendation system that leverages Louvain's Algorithm for graph community detection to provide personalized movie suggestions based on user preferences and interactions.", 
       technologies:["Python", "Tkinter"],
       link: "https://github.com/FionaVerzivolli/Netflix-Movie-Recommender"
     },
     { 
-      title: "Dr Mario",
+      title: "Dr. Mario",
       description: "A clone of the popular Doctor Mario... but this time.. made ENTIRELY in MIPS assembly! Supports different game modes, enemies, collision detection, movement, beautiful graphics, and scoring.", 
       technologies:["MIPS Assembly"],
       link: "https://github.com/FionaVerzivolli"
@@ -60,54 +53,49 @@ const projects = [
         link: "https://github.com/FionaVerzivolli"
     }
   ];
-  
-  <Grid container spacing={3} justifyContent="center">
-    {projects.map((project, index) => (
-      <ProjectCard
-        key={index}
-        title={project.title}
-        description={project.description}
-        technologies={project.technologies}
-        link={project.link}
-      />
-    ))}
-  </Grid>;
-  
 
 function Projects({ projectList = projects }) {
   return (
-    <ThemeProvider theme={theme}>
-      <Box sx={{ bgcolor: "background.default", color: "text.primary", minHeight: "100vh" }}>
-        {/* Navbar */}
-        <AppBar position="fixed" sx={{ bgcolor: "#1E1E1E" }}>
-          <Toolbar sx={{ justifyContent: "space-between" }}>
-            <Typography variant="h6" color="primary">Fiona</Typography>
-            <Box>
-              <Button color="inherit" component={Link} to="/">Home</Button>
-              <Button color="inherit" component={Link} to="/about">About</Button>
-              <Button color="inherit" component={Link} to="/gallery">Gallery</Button>
-              <Button color="inherit" component={Link} to="/contact">Contact</Button>
-            </Box>
-          </Toolbar>
-        </AppBar>
-
-        {/* Projects Section */}
-        <Container sx={{ py: 15, textAlign: "center", mt: 5 }}>
-          <Typography variant="h4" color="primary" fontWeight="bold">Projects</Typography>
-          <Grid container spacing={3} justifyContent="center" sx={{ mt: 3 }}>
-            {projectList.map((project, index) => (
-              <ProjectCard 
-                key={index} 
-                title={project.title} 
-                description={project.description} 
-                technologies={project.technologies} 
-                link={project.link}
-              />
-            ))}
-          </Grid>
-        </Container>
+    <Container maxWidth="xl" sx={{ py: 4 }}>
+      {/* Projects Header */}
+      <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Typography 
+          variant="h2" 
+          sx={{
+            mb: 2,
+            ...commonStyles.gradientText
+          }}
+        >
+          Projects
+        </Typography>
+        <Typography 
+          variant="h6" 
+          color="text.secondary"
+          sx={{
+            maxWidth: '800px',
+            mx: 'auto',
+            opacity: 0.8,
+            lineHeight: 1.6
+          }}
+        >
+          A collection of my work showcasing my passion for software development, 
+          from academic projects to real-world applications.
+        </Typography>
       </Box>
-    </ThemeProvider>
+
+      {/* Projects Grid */}
+      <Grid container spacing={4} justifyContent="center">
+        {projectList.map((project, index) => (
+          <ProjectCard 
+            key={index} 
+            title={project.title} 
+            description={project.description} 
+            technologies={project.technologies} 
+            link={project.link}
+          />
+        ))}
+      </Grid>
+    </Container>
   );
 }
 

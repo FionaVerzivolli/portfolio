@@ -1,73 +1,123 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Box, Button } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Link } from "react-router-dom";
-import "@fontsource/poppins";
-import profileImage from "./images/profile.jpg"; // Import the image
-
-const theme = createTheme({
-  typography: {
-    fontFamily: "Poppins, sans-serif",
-  },
-  palette: {
-    primary: { main: "#2196F3" },
-    background: { default: "#121212", paper: "#1A1A1A" },
-    text: { primary: "#ffffff", secondary: "#b0bec5" },
-  },
-});
+import { Typography, Box, Container, Paper } from "@mui/material";
+import { commonStyles } from "./theme";
+import profileImage from "./images/friends.jpg";
 
 function Home() {
   return (
-    <ThemeProvider theme={theme}>
-      <Box
-        sx={{
-          bgcolor: "background.default",
-          color: "text.primary",
-          minHeight: "100vh",
+    <Container maxWidth="xl" sx={{ py: 4 }}>
+      {/* Hero Section with Modern Design */}
+      <Box sx={{ 
+        display: "flex", 
+        flexDirection: { xs: "column", lg: "row" }, 
+        alignItems: "center", 
+        gap: 6, 
+        minHeight: "80vh",
+        justifyContent: "center"
+      }}>
+        {/* Profile Image with Modern Styling */}
+        <Box sx={{ 
+          position: "relative",
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "left",
-        }}
-      >
-        {/* Navbar */}
-        <AppBar position="fixed" sx={{ bgcolor: "#1E1E1E" }}>
-          <Toolbar sx={{ justifyContent: "space-between" }}>
-            <Typography variant="h6" color="primary">Fiona</Typography>
-            <Box>
-              <Button color="inherit" component={Link} to="/about">About</Button>
-              <Button color="inherit" component={Link} to="/projects">Projects</Button>
-              <Button color="inherit" component={Link} to="/gallery">Gallery</Button>
-              <Button color="inherit" component={Link} to="/contact">Contact</Button>
-            </Box>
-          </Toolbar>
-        </AppBar>
-
-        {/* Hero Section */}
-        <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", p: 3 }}>
-          {/* Profile Image */}
-          <Box
-            component="img"
-            src={profileImage} // Use the imported image
-            alt="Profile"
+          flexDirection: "column",
+          alignItems: "center"
+        }}>
+          <Paper
+            elevation={0}
             sx={{
-              width: 160,
-              height: 160,
-              borderRadius: "50%",
-              border: "5px solid rgba(33, 150, 243, 0.7)",
-              boxShadow: "0px 0px 20px rgba(33, 150, 243, 0.5)",
-              mr: 4,
+              ...commonStyles.glassmorphism,
+              ...commonStyles.gradientBorder,
+              ...commonStyles.float,
+              p: 3,
+              ...commonStyles.hoverEffect,
             }}
-          />
-          <Box>
-            <Typography variant="h3" color="primary" fontWeight="bold">Hi, I'm Fiona!</Typography>
-            <Typography variant="h6" color="text.secondary" sx={{ mt: 2, maxWidth: "70%" }}>
-              A passionate Software Developer. Learn more about me in the top right!
-            </Typography>
-          </Box>
+          >
+            <Box
+              component="img"
+              src={profileImage}
+              alt="Fiona Verzivolli"
+              sx={{
+                width: { xs: 300, sm: 400, md: 450 },
+                height: "auto",
+                borderRadius: "20px",
+                border: "3px solid rgba(99, 102, 241, 0.3)",
+                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
+                transition: "all 0.3s ease",
+                ...commonStyles.glow,
+              }}
+            />
+          </Paper>
+          <Typography 
+            variant="body2" 
+            color="text.secondary" 
+            sx={{ 
+              mt: 2, 
+              fontStyle: "italic",
+              textAlign: "center",
+              fontSize: "0.9rem",
+              opacity: 0.8,
+              ...commonStyles.fadeInUp,
+              animationDelay: '0.5s',
+              animationFillMode: 'both',
+            }}
+          >
+            Me and my orangutan friend at the Toronto Zoo.
+          </Typography>
+        </Box>
+
+        {/* Intro Section with Modern Typography */}
+        <Box sx={{ 
+          maxWidth: { xs: "100%", lg: "50%" },
+          textAlign: { xs: "center", lg: "left" }
+        }}>
+          <Typography 
+            variant="h1" 
+            sx={{
+              mb: 3,
+              ...commonStyles.gradientText,
+              ...commonStyles.fadeInLeft,
+              animationDelay: '0.2s',
+              animationFillMode: 'both',
+            }}
+          >
+            Hi, I'm Fiona!
+          </Typography>
+          
+          <Typography 
+            variant="h4" 
+            color="text.secondary" 
+            sx={{ 
+              mb: 4,
+              fontWeight: 400,
+              lineHeight: 1.4,
+              opacity: 0.9,
+              ...commonStyles.fadeInLeft,
+              animationDelay: '0.4s',
+              animationFillMode: 'both',
+            }}
+          >
+            A passionate Software Engineer building the future, one line of code at a time.
+          </Typography>
+          
+          <Typography 
+            variant="body1" 
+            color="text.secondary"
+            sx={{
+              fontSize: '1.1rem',
+              lineHeight: 1.6,
+              opacity: 0.8,
+              maxWidth: '600px',
+              ...commonStyles.fadeInLeft,
+              animationDelay: '0.6s',
+              animationFillMode: 'both',
+            }}
+          >
+            Currently interning at Shopify and working on innovative projects that make a real impact. 
+            I love creating solutions that help others and push the boundaries of what's possible.
+          </Typography>
         </Box>
       </Box>
-    </ThemeProvider>
+    </Container>
   );
 }
 

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar, Typography, Container, Box, Button, Grid, Dialog } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import "@fontsource/poppins";
-import { Link } from "react-router-dom";
+import { Typography, Container, Box, Grid, Dialog, IconButton } from "@mui/material";
+import { commonStyles } from "./theme";
+import CloseIcon from '@mui/icons-material/Close';
 
 // Import images
 import g1 from "./images/gallery/g1.jpg";
@@ -29,17 +28,6 @@ import boat from "./images/gallery/p3.jpg";
 import p2 from "./images/gallery/p2.jpg";
 import p1 from "./images/gallery/p1.jpg";
 
-const theme = createTheme({
-  typography: {
-    fontFamily: "Poppins, sans-serif",
-  },
-  palette: {
-    primary: { main: "#2196F3" },
-    background: { default: "#121212", paper: "#1A1A1A" },
-    text: { primary: "#ffffff", secondary: "#b0bec5" },
-  },
-});
-
 // **Predefined Order of Images**
 const images = [g4, crab, p1, boat, shop, pufferfish, stadium, g1, out, g3, baham, bing, bench, flowers, street, p2, g6, fish, g2, fruits, building, baham2, g5];
 
@@ -58,64 +46,120 @@ function Gallery() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <Box sx={{ bgcolor: "background.default", color: "text.primary", minHeight: "100vh" }}>
-        {/* Navbar */}
-        <AppBar position="fixed" sx={{ bgcolor: "#1E1E1E" }}>
-          <Toolbar sx={{ justifyContent: "space-between" }}>
-            <Typography variant="h6" color="primary">Fiona</Typography>
-            <Box>
-              <Button color="inherit" component={Link} to="/">Home</Button>
-              <Button color="inherit" component={Link} to="/about">About</Button>
-              <Button color="inherit" component={Link} to="/projects">Projects</Button>
-              <Button color="inherit" component={Link} to="/contact">Contact</Button>
-            </Box>
-          </Toolbar>
-        </AppBar>
+    <Container maxWidth="xl" sx={{ py: 4 }}>
+      {/* Gallery Header */}
+      <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Typography 
+          variant="h2" 
+          sx={{
+            mb: 3,
+            ...commonStyles.gradientText,
+            ...commonStyles.fadeInUp,
+            animationDelay: '0.2s',
+            animationFillMode: 'both',
+          }}
+        >
+          Photo Gallery
+        </Typography>
+        <Typography 
+          variant="h6" 
+          color="text.secondary" 
+          sx={{ 
+            maxWidth: '800px',
+            mx: 'auto',
+            mb: 2,
+            opacity: 0.8,
+            lineHeight: 1.6,
+            ...commonStyles.fadeInUp,
+            animationDelay: '0.4s',
+            animationFillMode: 'both',
+          }}
+        >
+          My hobbies include taking photos of nature, architecture, and my drawings.
+          This is a collection of moments and inspirations that reflect my passion for creativity.
+        </Typography>
+      </Box>
 
-        {/* Intro Section */}
-        <Box sx={{ pt: 15, textAlign: "center" }}>
-          <Typography variant="h4" color="primary" fontWeight="bold">Photo Gallery</Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ mt: 2, maxWidth: "70%", mx: "auto" }}>
-            My hobbies include taking photos of nature, architecture, and my drawings.
-            This is a collection of moments and inspirations that reflect my passion for creativity.
-          </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ mt: 2, fontWeight: "bold" }}>
-            Click on an image to see the full photo! Once open, you may scroll.
-          </Typography>
-        </Box>
-
-        {/* Gallery Section */}
-        <Container sx={{ mt: 5 }}>
-          <Grid container spacing={1} justifyContent="center">
-            {images.map((src, index) => (
-              <Grid 
-                item 
-                xs={12} sm={6} md={4}  
-                key={index} 
-                sx={{ display: "flex", aspectRatio: "1 / 1", cursor: "pointer" }} 
-                onClick={() => handleOpen(src)}
-              >
-                <Box
-                  component="img"
-                  src={src}
-                  alt={`Gallery Image ${index + 1}`}
-                  sx={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "8px",
-                    transition: "0.3s",
-                    "&:hover": { transform: "scale(1.05)", boxShadow: "0px 4px 20px rgba(0,0,0,0.5)" }
-                  }}
-                />
-              </Grid>
-            ))}
+      {/* Gallery Grid */}
+      <Grid container spacing={2} justifyContent="center">
+        {images.map((src, index) => (
+          <Grid 
+            item 
+            xs={12} sm={6} md={4} lg={3}
+            key={index} 
+            sx={{ 
+              display: "flex", 
+              aspectRatio: "1 / 1", 
+              cursor: "pointer" 
+            }} 
+            onClick={() => handleOpen(src)}
+          >
+            <Box
+              component="img"
+              src={src}
+              alt={`Gallery Image ${index + 1}`}
+              sx={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: "20px",
+                border: "2px solid rgba(255, 255, 255, 0.1)",
+                transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                position: 'relative',
+                '&:hover': { 
+                  transform: "scale(1.08) rotate(2deg)", 
+                  boxShadow: "0 20px 40px rgba(99, 102, 241, 0.4)",
+                  border: "2px solid rgba(99, 102, 241, 0.5)",
+                  filter: 'brightness(1.1) contrast(1.1)',
+                },
+                ...commonStyles.fadeInUp,
+                animationDelay: `${0.1 * index}s`,
+                animationFillMode: 'both',
+              }}
+            />
           </Grid>
-        </Container>
+        ))}
+      </Grid>
 
-        {/* Modal for Full Image */}
-        <Dialog open={open} onClose={handleClose} maxWidth="md">
+      {/* Modal for Full Image */}
+      <Dialog 
+        open={open} 
+        onClose={handleClose} 
+        maxWidth="lg"
+        fullWidth
+        PaperProps={{
+          sx: {
+            background: 'rgba(0, 0, 0, 0.95)',
+            backdropFilter: 'blur(20px)',
+            borderRadius: '24px',
+            overflow: 'hidden',
+            boxShadow: '0 25px 50px rgba(0, 0, 0, 0.5)',
+            border: '1px solid rgba(99, 102, 241, 0.2)',
+          }
+        }}
+      >
+        <Box sx={{ position: 'relative' }}>
+          <IconButton
+            onClick={handleClose}
+            sx={{
+              position: 'absolute',
+              top: 16,
+              right: 16,
+              zIndex: 1,
+              background: 'rgba(0, 0, 0, 0.7)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              color: 'white',
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                background: 'rgba(99, 102, 241, 0.3)',
+                border: '1px solid rgba(99, 102, 241, 0.5)',
+                transform: 'scale(1.1)',
+              }
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
           {selectedImage && (
             <Box
               component="img"
@@ -124,19 +168,14 @@ function Gallery() {
               sx={{
                 width: "100%",
                 height: "auto",
-                borderRadius: "8px",
+                display: "block",
+                transition: 'all 0.3s ease',
               }}
             />
           )}
-        </Dialog>
-    {/* Footer - Copyright Section */}
-    <Box sx={{ textAlign: "center", py: 2, bgcolor: "#1A1A1A", mt: 5 }}>
-          <Typography variant="body2" color="text.secondary">
-            &copy; {new Date().getFullYear()} Fiona Verzivolli. All Rights Reserved.
-          </Typography>
         </Box>
-      </Box>
-    </ThemeProvider>
+      </Dialog>
+    </Container>
   );
 }
 
