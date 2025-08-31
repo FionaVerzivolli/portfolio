@@ -57,26 +57,46 @@ export const theme = createTheme({
     },
   },
   palette: {
-    mode: 'dark',
+    mode: 'light',
     primary: {
-      main: '#6366f1', // Modern indigo
-      light: '#818cf8',
-      dark: '#4f46e5',
+      main: '#ff9ec7', // Cute bubblegum pink
+      light: '#ffb3d1',
+      dark: '#e68bb3',
     },
     secondary: {
-      main: '#ec4899', // Modern pink
-      light: '#f472b6',
-      dark: '#db2777',
+      main: '#a8e6cf', // Soft mint green
+      light: '#c4f0e1',
+      dark: '#8dd3b8',
     },
     background: {
-      default: '#0f0f23', // Deep dark blue
-      paper: 'rgba(255, 255, 255, 0.03)',
+      default: '#fef7ff', // Very soft lavender white
+      paper: 'rgba(255, 182, 193, 0.1)', // Light pink tint
     },
     text: {
-      primary: '#f8fafc',
-      secondary: 'rgba(248, 250, 252, 0.7)',
+      primary: '#5d4e75', // Soft purple-gray
+      secondary: 'rgba(93, 78, 117, 0.7)',
     },
-    divider: 'rgba(255, 255, 255, 0.08)',
+    divider: 'rgba(255, 182, 193, 0.2)', // Light pink dividers
+    success: {
+      main: '#ffd93d', // Sunny yellow
+      light: '#ffe066',
+      dark: '#e6c234',
+    },
+    info: {
+      main: '#a8d8ea', // Soft sky blue
+      light: '#c4e5f0',
+      dark: '#8bc6d9',
+    },
+    warning: {
+      main: '#ffb347', // Peach
+      light: '#ffc266',
+      dark: '#e69f3d',
+    },
+    error: {
+      main: '#ff8a95', // Soft coral
+      light: '#ffa8b0',
+      dark: '#e67c86',
+    },
   },
   shape: {
     borderRadius: 16,
@@ -107,9 +127,10 @@ export const theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          background: 'rgba(15, 15, 35, 0.8)',
+          background: 'rgba(255, 255, 255, 0.8)',
           backdropFilter: 'blur(20px)',
-          borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+          borderBottom: '1px solid rgba(255, 182, 193, 0.2)',
+          boxShadow: '0 2px 20px rgba(255, 158, 199, 0.1)',
         },
       },
     },
@@ -134,13 +155,14 @@ export const theme = createTheme({
 // Common styles that can be reused
 export const commonStyles = {
   glassmorphism: {
-    background: 'rgba(255, 255, 255, 0.03)',
+    background: 'rgba(255, 255, 255, 0.4)',
     backdropFilter: 'blur(20px)',
-    border: '1px solid rgba(255, 255, 255, 0.08)',
+    border: '1px solid rgba(255, 182, 193, 0.3)',
     borderRadius: '20px',
+    boxShadow: '0 8px 32px rgba(255, 158, 199, 0.15)',
   },
   gradientText: {
-    background: 'linear-gradient(135deg, #6366f1 0%, #ec4899 100%)',
+    background: 'linear-gradient(135deg, #ff9ec7 0%, #a8e6cf 50%, #ffd93d 100%)',
     backgroundClip: 'text',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
@@ -149,15 +171,15 @@ export const commonStyles = {
     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
     '&:hover': {
       transform: 'scale(1.02)',
-      boxShadow: '0 20px 40px rgba(99, 102, 241, 0.2)',
+      boxShadow: '0 20px 40px rgba(255, 158, 199, 0.3)',
     },
   },
   cardHover: {
     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
     '&:hover': {
       transform: 'translateY(-8px)',
-      boxShadow: '0 20px 40px rgba(99, 102, 241, 0.2)',
-      border: '1px solid rgba(99, 102, 241, 0.3)',
+      boxShadow: '0 20px 40px rgba(255, 158, 199, 0.3)',
+      border: '1px solid rgba(255, 158, 199, 0.5)',
     },
   },
   // New animation styles
@@ -177,9 +199,9 @@ export const commonStyles = {
     animation: 'float 3s ease-in-out infinite',
   },
   glow: {
-    boxShadow: '0 0 20px rgba(99, 102, 241, 0.3)',
+    boxShadow: '0 0 20px rgba(255, 158, 199, 0.4)',
     '&:hover': {
-      boxShadow: '0 0 30px rgba(99, 102, 241, 0.5)',
+      boxShadow: '0 0 30px rgba(255, 158, 199, 0.6)',
     },
   },
   gradientBorder: {
@@ -193,7 +215,7 @@ export const commonStyles = {
       bottom: 0,
       borderRadius: '20px',
       padding: '2px',
-      background: 'linear-gradient(135deg, #6366f1, #ec4899)',
+      background: 'linear-gradient(135deg, #ff9ec7, #a8e6cf, #ffd93d)',
       WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
       WebkitMaskComposite: 'xor',
       maskComposite: 'exclude',
@@ -206,7 +228,7 @@ export const commonStyles = {
   },
   typingEffect: {
     overflow: 'hidden',
-    borderRight: '2px solid #6366f1',
+    borderRight: '2px solid #ff9ec7',
     whiteSpace: 'nowrap',
     animation: 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite',
   },
@@ -218,7 +240,7 @@ export const commonStyles = {
       width: '4px',
       height: '4px',
       borderRadius: '50%',
-      background: '#6366f1',
+      background: '#ff9ec7',
       animation: 'particle 2s infinite',
     },
     '&::before': {

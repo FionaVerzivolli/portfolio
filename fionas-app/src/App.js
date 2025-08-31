@@ -37,7 +37,7 @@ function App() {
         bgcolor: "background.default", 
         color: "text.primary", 
         minHeight: "100vh",
-        background: 'linear-gradient(135deg, #0f0f23 0%, #1e1b4b 50%, #0f0f23 100%)',
+        background: 'linear-gradient(135deg, #fef7ff 0%, #fff0f8 30%, #f8f0ff 70%, #ffe4f1 100%)',
         position: 'relative',
         overflow: 'hidden'
       }}>
@@ -78,13 +78,13 @@ function App() {
                 background: 'transparent',
                 border: '1px solid transparent',
                 '&:hover': {
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  background: 'rgba(255, 158, 199, 0.15)',
+                  border: '1px solid rgba(255, 158, 199, 0.3)',
                 },
                 '&.active': {
-                  background: 'rgba(99, 102, 241, 0.2)',
-                  border: '1px solid rgba(99, 102, 241, 0.5)',
-                  color: '#6366f1',
+                  background: 'rgba(255, 158, 199, 0.25)',
+                  border: '1px solid rgba(255, 158, 199, 0.6)',
+                  color: '#ff9ec7',
                 }
               }
             }}>

@@ -13,9 +13,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #0f0f23;
-  color: #f8fafc;
+  background: linear-gradient(135deg, #fef7ff 0%, #fff0f8 50%, #f8f0ff 100%);
+  color: #5d4e75;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* Custom Scrollbar */
@@ -24,23 +25,23 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 182, 193, 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.3);
+  background: rgba(255, 158, 199, 0.5);
   border-radius: 4px;
   transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(99, 102, 241, 0.5);
+  background: rgba(255, 158, 199, 0.7);
 }
 
 /* Firefox scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(99, 102, 241, 0.3) rgba(255, 255, 255, 0.05);
+  scrollbar-color: rgba(255, 158, 199, 0.5) rgba(255, 182, 193, 0.1);
 }
 
 code {
@@ -55,13 +56,13 @@ code {
 
 /* Selection styling */
 ::selection {
-  background: rgba(99, 102, 241, 0.3);
-  color: #ffffff;
+  background: rgba(255, 158, 199, 0.4);
+  color: #5d4e75;
 }
 
 ::-moz-selection {
-  background: rgba(99, 102, 241, 0.3);
-  color: #ffffff;
+  background: rgba(255, 158, 199, 0.4);
+  color: #5d4e75;
 }
 
 /* Keyframe Animations */
@@ -130,7 +131,7 @@ code {
     border-color: transparent;
   }
   50% {
-    border-color: #6366f1;
+    border-color: #ff9ec7;
   }
 }
 
@@ -159,7 +160,7 @@ code {
 
 /* Animated background gradient */
 .animated-bg {
-  background: linear-gradient(-45deg, #0f0f23, #1e1b4b, #312e81, #0f0f23);
+  background: linear-gradient(-45deg, #fef7ff, #fff0f8, #f8f0ff, #ffe4f1);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
 }
@@ -177,11 +178,12 @@ code {
 
 .particle {
   position: absolute;
-  width: 2px;
-  height: 2px;
-  background: rgba(99, 102, 241, 0.5);
+  width: 3px;
+  height: 3px;
+  background: rgba(255, 158, 199, 0.6);
   border-radius: 50%;
   animation: float 6s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(255, 158, 199, 0.4);
 }
 
 .particle:nth-child(1) { left: 10%; animation-delay: 0s; }

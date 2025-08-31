@@ -40,8 +40,8 @@ function Home() {
                 width: { xs: 300, sm: 400, md: 450 },
                 height: "auto",
                 borderRadius: "20px",
-                border: "3px solid rgba(99, 102, 241, 0.3)",
-                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
+                border: "3px solid rgba(255, 158, 199, 0.4)",
+                boxShadow: "0 10px 30px rgba(255, 158, 199, 0.2)",
                 transition: "all 0.3s ease",
                 ...commonStyles.glow,
               }}
