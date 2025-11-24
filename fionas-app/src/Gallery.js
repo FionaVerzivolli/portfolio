@@ -28,54 +28,54 @@ import p2 from "./images/gallery/p2.jpg";
 import p1 from "./images/gallery/p1.jpg";
 
 // **Predefined Order of Images**
-const images = [g4, crab, p1, boat, shop, pufferfish, stadium, g1, out, g3, baham, bing, bench, flowers, street, p2, g6, fish, g2, fruits, building, baham2, g5];
+const images = [
+  g4, crab, p1, boat, shop, pufferfish, stadium, g1, out, g3, baham, bing,
+  bench, flowers, street, p2, g6, fish, g2, fruits, building, baham2, g5,
+];
 
 function Gallery() {
   return (
-    <Container maxWidth="xl" sx={{ py: 4 }}>
+    <Container maxWidth="xl" sx={{ py: 6 }}>
       {/* Gallery Header */}
-      <Box sx={{ textAlign: "center", mb: 8 }}>
-        <Typography 
-          variant="h2" 
+      <Box sx={{ textAlign: "center", mb: 6 }}>
+        <Typography
+          variant="h2"
           sx={{
-            mb: 3,
-            ...commonStyles.gradientText,
-            ...commonStyles.fadeInUp,
-            animationDelay: '0.2s',
-            animationFillMode: 'both',
+            mb: 2,
+            ...commonStyles.gradientText, // just primary color now
           }}
         >
           Photo Gallery
         </Typography>
-        <Typography 
-          variant="h6" 
-          color="text.secondary" 
-          sx={{ 
-            maxWidth: '800px',
-            mx: 'auto',
+        <Typography
+          variant="h6"
+          color="text.secondary"
+          sx={{
+            maxWidth: "800px",
+            mx: "auto",
             mb: 2,
-            opacity: 0.8,
+            opacity: 0.9,
             lineHeight: 1.6,
-            ...commonStyles.fadeInUp,
-            animationDelay: '0.4s',
-            animationFillMode: 'both',
           }}
         >
           My hobbies include taking photos of nature, architecture, and my drawings.
-          This is a collection of moments and inspirations that reflect my passion for creativity.
+          Feel free to check out my gallery.
         </Typography>
       </Box>
 
       {/* Gallery Grid */}
       <Grid container spacing={2} justifyContent="center">
         {images.map((src, index) => (
-          <Grid 
-            item 
-            xs={12} sm={6} md={4} lg={3}
-            key={index} 
-            sx={{ 
-              display: "flex", 
-              aspectRatio: "1 / 1"
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+            lg={3}
+            key={index}
+            sx={{
+              display: "flex",
+              aspectRatio: "1 / 1",
             }}
           >
             <Box
@@ -86,19 +86,16 @@ function Gallery() {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
-                borderRadius: "20px",
-                border: "2px solid rgba(255, 255, 255, 0.1)",
-                transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                position: 'relative',
-                '&:hover': { 
-                  transform: "scale(1.05)", 
-                  boxShadow: "0 15px 35px rgba(99, 102, 241, 0.3)",
-                  border: "2px solid rgba(99, 102, 241, 0.3)",
-                  filter: 'brightness(1.1) contrast(1.1)',
+                borderRadius: "12px",
+                border: "1px solid #e5e7eb",
+                transition:
+                  "transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease",
+                boxShadow: "0 1px 4px rgba(15, 23, 42, 0.08)",
+                "&:hover": {
+                  transform: "translateY(-4px)",
+                  boxShadow: "0 6px 16px rgba(15, 23, 42, 0.16)",
+                  borderColor: "primary.main",
                 },
-                ...commonStyles.fadeInUp,
-                animationDelay: `${0.1 * index}s`,
-                animationFillMode: 'both',
               }}
             />
           </Grid>

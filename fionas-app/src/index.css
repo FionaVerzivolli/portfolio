@@ -13,35 +13,34 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #fef7ff 0%, #fff0f8 50%, #f8f0ff 100%);
-  color: #5d4e75;
+  background-color: #f5f7fb; /* neutral background */
+  color: #111827;            /* primary text color */
   overflow-x: hidden;
   min-height: 100vh;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar (WebKit) */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 182, 193, 0.1);
+  background: #e5e7eb;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 158, 199, 0.5);
+  background: #9ca3af;
   border-radius: 4px;
-  transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 158, 199, 0.7);
+  background: #6b7280;
 }
 
 /* Firefox scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 158, 199, 0.5) rgba(255, 182, 193, 0.1);
+  scrollbar-color: #9ca3af #e5e7eb;
 }
 
 code {
@@ -49,27 +48,30 @@ code {
     monospace;
 }
 
-/* Smooth transitions for all elements */
-* {
-  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+/* Subtle transitions for interactive elements only */
+a,
+button,
+[role="button"] {
+  transition: color 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 /* Selection styling */
 ::selection {
-  background: rgba(255, 158, 199, 0.4);
-  color: #5d4e75;
+  background: rgba(37, 99, 235, 0.12); /* primary blue, very soft */
+  color: #111827;
 }
 
 ::-moz-selection {
-  background: rgba(255, 158, 199, 0.4);
-  color: #5d4e75;
+  background: rgba(37, 99, 235, 0.12);
+  color: #111827;
 }
 
-/* Keyframe Animations */
+/* Keyframe Animations – kept only simple fade-ins for optional use */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -80,7 +82,7 @@ code {
 @keyframes fadeInLeft {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-16px);
   }
   to {
     opacity: 1;
@@ -91,108 +93,10 @@ code {
 @keyframes fadeInRight {
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(16px);
   }
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #ff9ec7;
-  }
-}
-
-@keyframes particle {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-20px) scale(0);
-    opacity: 0;
-  }
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Animated background gradient */
-.animated-bg {
-  background: linear-gradient(-45deg, #fef7ff, #fff0f8, #f8f0ff, #ffe4f1);
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
-}
-
-/* Floating particles */
-.floating-particles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.particle {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  background: rgba(255, 158, 199, 0.6);
-  border-radius: 50%;
-  animation: float 6s ease-in-out infinite;
-  box-shadow: 0 0 10px rgba(255, 158, 199, 0.4);
-}
-
-.particle:nth-child(1) { left: 10%; animation-delay: 0s; }
-.particle:nth-child(2) { left: 20%; animation-delay: 2s; }
-.particle:nth-child(3) { left: 30%; animation-delay: 4s; }
-.particle:nth-child(4) { left: 40%; animation-delay: 1s; }
-.particle:nth-child(5) { left: 50%; animation-delay: 3s; }
-.particle:nth-child(6) { left: 60%; animation-delay: 5s; }
-.particle:nth-child(7) { left: 70%; animation-delay: 2s; }
-.particle:nth-child(8) { left: 80%; animation-delay: 4s; }
-.particle:nth-child(9) { left: 90%; animation-delay: 1s; }
-.particle:nth-child(10) { left: 95%; animation-delay: 3s; }
