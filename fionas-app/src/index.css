@@ -2,9 +2,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 body {
   margin: 0;
@@ -48,13 +45,6 @@ code {
     monospace;
 }
 
-/* Subtle transitions for interactive elements only */
-a,
-button,
-[role="button"] {
-  transition: color 0.2s ease, background-color 0.2s ease,
-    border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
 
 /* Selection styling */
 ::selection {
@@ -67,36 +57,3 @@ button,
   color: #111827;
 }
 
-/* Keyframe Animations – kept only simple fade-ins for optional use */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}

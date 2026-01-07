@@ -1,31 +1,24 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar, Typography, Box, Button, Container, Fade } from "@mui/material";
+import { AppBar, Toolbar, Typography, Box, Button, Container } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme, commonStyles } from "./theme";
-import FloatingParticles from "./FloatingParticles";
-import Home from "./Home";
 import About from "./About";
-import Projects from "./Projects";
 import Gallery from "./Gallery";
 import Contact from "./Contact";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState('about');
 
   const renderContent = () => {
     switch (currentPage) {
-      case 'home':
-        return <Home />;
       case 'about':
         return <About />;
-      case 'projects':
-        return <Projects />;
       case 'gallery':
         return <Gallery />;
       case 'contact':
         return <Contact />;
       default:
-        return <Home />;
+        return <About />;
     }
   };
 
@@ -37,12 +30,7 @@ function App() {
         bgcolor: "background.default", 
         color: "text.primary", 
         minHeight: "100vh",
-        background: 'linear-gradient(135deg, #fef7ff 0%, #fff0f8 30%, #f8f0ff 70%, #ffe4f1 100%)',
-        position: 'relative',
-        overflow: 'hidden'
       }}>
-        {/* Floating Particles */}
-        <FloatingParticles />
 
         {/* Modern Navbar */}
         <AppBar position="fixed" elevation={0}>
@@ -55,12 +43,8 @@ function App() {
                 fontSize: '1.5rem',
                 cursor: 'pointer',
                 ...commonStyles.gradientText,
-                transition: 'all 0.3s ease',
-                '&:hover': {
-                  transform: 'scale(1.05)',
-                }
               }}
-              onClick={() => setCurrentPage('home')}
+              onClick={() => setCurrentPage('about')}
             >
               Fiona Verzivolli
             </Typography>
@@ -77,37 +61,19 @@ function App() {
                 fontWeight: 500,
                 background: 'transparent',
                 border: '1px solid transparent',
-                '&:hover': {
-                  background: 'rgba(255, 158, 199, 0.15)',
-                  border: '1px solid rgba(255, 158, 199, 0.3)',
-                },
                 '&.active': {
-                  background: 'rgba(255, 158, 199, 0.25)',
-                  border: '1px solid rgba(255, 158, 199, 0.6)',
-                  color: '#ff9ec7',
+                  background: 'rgba(37, 99, 235, 0.1)',
+                  border: '1px solid rgba(37, 99, 235, 0.3)',
+                  color: '#2563eb',
                 }
               }
             }}>
-              <Button 
-                color="inherit" 
-                onClick={() => setCurrentPage('home')}
-                className={isActivePage('home') ? 'active' : ''}
-              >
-                Home
-              </Button>
               <Button 
                 color="inherit" 
                 onClick={() => setCurrentPage('about')}
                 className={isActivePage('about') ? 'active' : ''}
               >
                 About
-              </Button>
-              <Button 
-                color="inherit" 
-                onClick={() => setCurrentPage('projects')}
-                className={isActivePage('projects') ? 'active' : ''}
-              >
-                Projects
               </Button>
               <Button 
                 color="inherit" 
@@ -129,11 +95,9 @@ function App() {
 
         {/* Dynamic Content Area */}
         <Box sx={{ pt: 8 }}>
-          <Fade in={true} timeout={500}>
-            <Container maxWidth="xl" sx={{ py: 4 }}>
-              {renderContent()}
-            </Container>
-          </Fade>
+          <Container maxWidth="xl" sx={{ py: 4 }}>
+            {renderContent()}
+          </Container>
         </Box>
       </Box>
     </ThemeProvider>

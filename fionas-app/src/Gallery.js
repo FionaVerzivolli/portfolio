@@ -27,7 +27,6 @@ import boat from "./images/gallery/p3.jpg";
 import p2 from "./images/gallery/p2.jpg";
 import p1 from "./images/gallery/p1.jpg";
 
-// **Predefined Order of Images**
 const images = [
   g4, crab, p1, boat, shop, pufferfish, stadium, g1, out, g3, baham, bing,
   bench, flowers, street, p2, g6, fish, g2, fruits, building, baham2, g5,
@@ -36,7 +35,6 @@ const images = [
 function Gallery() {
   return (
     <Container maxWidth="xl" sx={{ py: 6 }}>
-      {/* Gallery Header */}
       <Box sx={{ textAlign: "center", mb: 6 }}>
         <Typography
           variant="h2"
@@ -58,12 +56,11 @@ function Gallery() {
             lineHeight: 1.6,
           }}
         >
-          My hobbies include taking photos of nature, architecture, and my drawings.
-          Feel free to check out my gallery.
+          My hobbies include taking photos and exploring art.
+          Feel free to check out my gallery, which is a collection of moments I've captured over the years.
         </Typography>
       </Box>
 
-      {/* Gallery Grid */}
       <Grid container spacing={2} justifyContent="center">
         {images.map((src, index) => (
           <Grid
@@ -88,14 +85,7 @@ function Gallery() {
                 objectFit: "cover",
                 borderRadius: "12px",
                 border: "1px solid #e5e7eb",
-                transition:
-                  "transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease",
                 boxShadow: "0 1px 4px rgba(15, 23, 42, 0.08)",
-                "&:hover": {
-                  transform: "translateY(-4px)",
-                  boxShadow: "0 6px 16px rgba(15, 23, 42, 0.16)",
-                  borderColor: "primary.main",
-                },
               }}
             />
           </Grid>

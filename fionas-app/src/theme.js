@@ -60,21 +60,21 @@ export const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#2563eb", // Sleek blue
+      main: "#2563eb",
       light: "#60a5fa",
       dark: "#1d4ed8",
     },
     secondary: {
-      main: "#6366f1", // Subtle indigo accent
+      main: "#6366f1",
       light: "#a5b4fc",
       dark: "#4f46e5",
     },
     background: {
-      default: "#f5f7fb", // Soft neutral background
+      default: "#f5f7fb",
       paper: "#ffffff",
     },
     text: {
-      primary: "#111827", // Slate/dark gray
+      primary: "#111827",
       secondary: "#4b5563",
     },
     divider: "#e5e7eb",
@@ -111,11 +111,7 @@ export const theme = createTheme({
           fontWeight: 600,
           fontSize: "0.95rem",
           padding: "8px 20px",
-          transition: "background-color 0.2s ease, box-shadow 0.2s ease",
           boxShadow: "none",
-          "&:hover": {
-            boxShadow: "0 2px 8px rgba(15, 23, 42, 0.18)",
-          },
         },
         outlined: {
           borderWidth: "1px",
@@ -155,9 +151,7 @@ export const theme = createTheme({
   },
 });
 
-// Common styles that can be reused – simplified & de-vibed
 export const commonStyles = {
-  // Former "glassmorphism", now a clean card/container
   glassmorphism: {
     backgroundColor: "#ffffff",
     border: "1px solid #e5e7eb",
@@ -165,73 +159,30 @@ export const commonStyles = {
     boxShadow: "0 1px 6px rgba(15, 23, 42, 0.06)",
   },
 
-  // Former gradientText: now just uses primary color
   gradientText: {
     color: "#2563eb",
     fontWeight: 600,
   },
 
-  // Subtle hover with no scale/floating
-  hoverEffect: {
-    transition: "box-shadow 0.2s ease, transform 0.2s ease",
-    "&:hover": {
-      boxShadow: "0 4px 12px rgba(15, 23, 42, 0.10)",
-      transform: "translateY(-2px)",
-    },
-  },
-
-  // Cleaner card hover, no borders changing color
-  cardHover: {
-    transition: "box-shadow 0.2s ease, transform 0.2s ease",
-    "&:hover": {
-      transform: "translateY(-2px)",
-      boxShadow: "0 6px 18px rgba(15, 23, 42, 0.12)",
-    },
-  },
-
-  // Keep a single subtle animation utility if you still want it
-  fadeInUp: {
-    animation: "fadeInUp 0.3s ease-out forwards",
-  },
-  fadeInLeft: {
-    animation: "fadeInLeft 0.3s ease-out forwards",
-  },
-  fadeInRight: {
-    animation: "fadeInRight 0.3s ease-out forwards",
-  },
-
-  // Removed “floaty” vibe – now just a subtle emphasis style
-  pulse: {
-    outline: "2px solid rgba(37, 99, 235, 0.15)",
-    outlineOffset: "2px",
-  },
-
-  // No float animation at all anymore
-  float: {
-    // intentionally left minimal – no animation
-  },
-
-  // Glow is now a very subtle focus ring
-  glow: {
-    boxShadow: "0 0 0 1px rgba(37, 99, 235, 0.25)",
-    "&:hover": {
-      boxShadow: "0 0 0 2px rgba(37, 99, 235, 0.35)",
-    },
-  },
-
-  // Former gradientBorder, now just a clean neutral border
+  // Not using a bunch of these anymore
+  hoverEffect: {},
+  cardHover: {},
+  fadeInUp: {},
+  fadeInLeft: {},
+  fadeInRight: {},
+  pulse: {},
+  float: {},
+  glow: {},
   gradientBorder: {
     borderRadius: "12px",
     border: "1px solid #e5e7eb",
   },
 
-  // Typing effect simplified: no animated caret
   typingEffect: {
     overflow: "hidden",
     whiteSpace: "nowrap",
   },
 
-  // Particle effect stripped of animation & decoration
   particleEffect: {
     position: "relative",
   },
