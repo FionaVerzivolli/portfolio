@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.09b9ee96.css",
-    "main.js": "/static/js/main.be13284d.js",
+    "main.css": "/static/css/main.9abcb842.css",
+    "main.js": "/static/js/main.e83cef62.js",
     "static/js/453.44c077fc.chunk.js": "/static/js/453.44c077fc.chunk.js",
     "static/media/crab.jpg": "/static/media/crab.4a8cda4a7053eb1467c5.jpg",
     "static/media/fruits.jpg": "/static/media/fruits.70d48a50c428fa54a1b2.jpg",
@@ -17,7 +17,6 @@
     "static/media/g4.jpg": "/static/media/g4.afb6ab47c684b734c350.jpg",
     "static/media/g3.jpg": "/static/media/g3.0975c458aefb76b80f89.jpg",
     "static/media/p1.jpg": "/static/media/p1.505c2dffdd68899f348e.jpg",
-    "static/media/friends.jpg": "/static/media/friends.edc0794b2675721b4f0a.jpg",
     "static/media/building.jpg": "/static/media/building.7473edd7e11804af26d1.jpg",
     "static/media/g1.jpg": "/static/media/g1.35dc1d05c6d6d36d6970.jpg",
     "static/media/fish.jpg": "/static/media/fish.a710e37fd3b33e93925b.jpg",
@@ -32,12 +31,12 @@
     "static/media/poppins-latin-ext-400-normal.woff": "/static/media/poppins-latin-ext-400-normal.7e12786771ac4a8e6a5c.woff",
     "static/media/poppins-latin-ext-400-normal.woff2": "/static/media/poppins-latin-ext-400-normal.d7c074a9c34fe9785f69.woff2",
     "index.html": "/index.html",
-    "main.09b9ee96.css.map": "/static/css/main.09b9ee96.css.map",
-    "main.be13284d.js.map": "/static/js/main.be13284d.js.map",
+    "main.9abcb842.css.map": "/static/css/main.9abcb842.css.map",
+    "main.e83cef62.js.map": "/static/js/main.e83cef62.js.map",
     "453.44c077fc.chunk.js.map": "/static/js/453.44c077fc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.09b9ee96.css",
-    "static/js/main.be13284d.js"
+    "static/css/main.9abcb842.css",
+    "static/js/main.e83cef62.js"
   ]
 }
